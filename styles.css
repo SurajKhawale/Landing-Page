@@ -1,0 +1,276 @@
+:root {
+  --bg: #0a1227;
+  --panel: #111c38;
+  --text: #e7ecff;
+  --muted: #9db0d8;
+  --accent: #4f7dff;
+  --accent-soft: #8fb0ff;
+  --line: rgba(157, 176, 216, 0.2);
+  --success: #86ffcf;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  background: radial-gradient(circle at 10% 10%, #13244a 0%, var(--bg) 50%);
+  color: var(--text);
+  line-height: 1.55;
+}
+
+.container {
+  width: min(1120px, 92vw);
+  margin: 0 auto;
+}
+
+.hero {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 4rem;
+}
+
+.top-nav {
+  padding: 1.25rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-weight: 700;
+}
+
+.brand-dot {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #79a2ff, #3468ff);
+  box-shadow: 0 0 0.9rem rgba(79, 125, 255, 0.8);
+}
+
+.hero-content {
+  margin-top: 2.25rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: start;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent-soft);
+  margin-bottom: 0.75rem;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(2rem, 4.6vw, 3.4rem);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.lead {
+  color: var(--muted);
+  max-width: 64ch;
+}
+
+.hero-cta-group {
+  margin: 1.7rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.btn {
+  padding: 0.78rem 1.15rem;
+  border-radius: 0.7rem;
+  border: 1px solid transparent;
+  font-weight: 600;
+  text-decoration: none;
+  color: inherit;
+  transition: 0.2s ease;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: linear-gradient(145deg, #5e87ff, var(--accent));
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(79, 125, 255, 0.4);
+}
+
+.btn-secondary,
+.btn-outline {
+  border-color: var(--line);
+  background: rgba(17, 28, 56, 0.6);
+}
+
+.btn-secondary:hover,
+.btn-outline:hover {
+  border-color: var(--accent-soft);
+}
+
+.trust-points {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.7rem;
+  color: var(--muted);
+}
+
+.trust-points li::before {
+  content: "✓";
+  color: var(--success);
+  margin-right: 0.5rem;
+}
+
+.hero-card {
+  background: linear-gradient(170deg, rgba(17, 28, 56, 0.95), rgba(10, 18, 39, 0.9));
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  padding: 1.4rem;
+}
+
+.card-label {
+  color: var(--accent-soft);
+  font-weight: 600;
+  margin-bottom: 0.45rem;
+}
+
+.metric-grid {
+  margin: 1.2rem 0;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.metric-value {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 0.2rem;
+}
+
+.metric-label,
+.card-footnote {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.section-heading {
+  max-width: 72ch;
+  margin-bottom: 1.75rem;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.feature-card {
+  background: rgba(17, 28, 56, 0.55);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  padding: 1.3rem;
+}
+
+.feature-card p {
+  color: var(--muted);
+}
+
+.strip {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: rgba(17, 28, 56, 0.35);
+}
+
+.strip-content {
+  display: grid;
+  gap: 1.8rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.strip ul {
+  margin: 0;
+  color: var(--muted);
+}
+
+.strip li + li {
+  margin-top: 0.7rem;
+}
+
+.contact-form {
+  display: grid;
+  gap: 1rem;
+  max-width: 650px;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 0.45rem;
+  font-weight: 500;
+}
+
+input,
+select {
+  background: #0f1a36;
+  border: 1px solid var(--line);
+  color: var(--text);
+  padding: 0.75rem;
+  border-radius: 0.6rem;
+  font: inherit;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid rgba(79, 125, 255, 0.5);
+  border-color: transparent;
+}
+
+.form-note {
+  color: var(--muted);
+  margin: 0;
+}
+
+.footer {
+  border-top: 1px solid var(--line);
+}
+
+.footer-content {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1.4rem 0 2.5rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 950px) {
+  .hero-content,
+  .feature-grid,
+  .strip-content {
+    grid-template-columns: 1fr;
+  }
+}
